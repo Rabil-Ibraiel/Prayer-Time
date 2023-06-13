@@ -57,13 +57,11 @@ function getPrayer(cityName) {
       getTime("asr", timing.Asr);
       getTime("maghrib", timing.Maghrib);
       getTime("isha", timing.Isha);
+      loader.add("display");
     })
     .catch(function (error) {
       console.log(error);
     });
-  setTimeout(() => {
-    loader.add("display");
-  }, 150);
 }
 
 function getTime(id, time) {
